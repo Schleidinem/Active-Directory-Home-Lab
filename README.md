@@ -1,5 +1,3 @@
-# Windows-Server-Hybrid-Environment---Personal-Home-Lab
-
 # 🖥️ Active Directory Setup Lab
 
 This project demonstrates how to set up a Microsoft Active Directory (AD) environment inside a Windows Server virtual machine. It showcases hands-on skills in system administration, user/group management, domain configuration, and automation with PowerShell.  
