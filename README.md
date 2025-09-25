@@ -2,11 +2,12 @@
 
 ## 📌 Project Overview  
 This lab demonstrates how to set up **Active Directory (AD)** on a **Windows Server virtual machine** using **VMware Workstation Pro**.  
-The project covers installation, configuration, and AD setup, including **Organizational Units (OUs), groups, and user accounts** — simulating a real enterprise environment.  
+The project covers installation, configuration, and AD setup, including **Organizational Units (OUs), groups, users, and role assignments**
 
 ## 🎯 Objectives  
 - Install Windows Server in VMware Workstation Pro  
-- Set up and configure **Active Directory Domain Services (AD DS)**  
+- Set up and configure **Active Directory Domain Services (AD DS)**
+-  Use **Server Manager** to install and assign roles/features  
 - Create **Organizational Units (OUs)** to represent departments/regions  
 - Add **groups** within OUs  
 - Create and manage **user accounts** in AD  
@@ -30,15 +31,29 @@ The project covers installation, configuration, and AD setup, including **Organi
 
    - Installed Windows Server on the VM
      <img width="975" height="425" alt="image" src="https://github.com/user-attachments/assets/4eceef33-2685-4213-87e3-75f4ce87451b" />
-     <img width="975" height="578" alt="image" src="https://github.com/user-attachments/assets/50a7bd96-7686-4062-906c-623084f9393a" />
+  
+     Select Custom Install
+     <img width="975" height="719" alt="image" src="https://github.com/user-attachments/assets/07dfb931-46f7-4c52-9896-a86a6fd7df92" />
+     <img width="975" height="578" alt="image" src="https://github.com/user-attachments/assets/1c4cbabb-c8b5-49af-ae53-4af59dcbb553" />
+
+     <img width="975" height="794" alt="image" src="https://github.com/user-attachments/assets/ec33b294-7795-426d-8581-91e1ec561cfa" />
+
+  2.  **Assigning Roles in Server Manager**  
+   <img width="975" height="524" alt="image" src="https://github.com/user-attachments/assets/dd77a468-100e-4df1-ac7b-888fc6f6c70b" />
+   <img width="975" height="690" alt="image" src="https://github.com/user-attachments/assets/6deb2496-ca10-45fa-8cc8-fa355553b242" />
+   <img width="975" height="435" alt="image" src="https://github.com/user-attachments/assets/1956cbfe-5ef0-433a-89f9-04c03c6137be" />
+      Installed the **Active Directory Domain Services (AD DS)** role
+   <img width="975" height="663" alt="image" src="https://github.com/user-attachments/assets/a73373df-fb03-40fc-9317-28b21bc5ef5c" />
+  
 
 
-2. **Active Directory Installation**  
+4. **Active Directory Installation**  
    - Installed **Active Directory Domain Services (AD DS)**
      <img width="975" height="628" alt="image" src="https://github.com/user-attachments/assets/167a9753-d269-4c9a-88e7-65c940d00c83" />
 
 
-3. **Active Directory Configuration**  
+
+5. **Active Directory Configuration**  
    - Created **Organizational Units (OUs)** for different regions
      <img width="975" height="529" alt="image" src="https://github.com/user-attachments/assets/040af9b1-c15c-427a-adef-eae96b0d8bdb" />
   
@@ -53,9 +68,10 @@ The project covers installation, configuration, and AD setup, including **Organi
 ## 📜 Key Learnings  
 - Hands-on experience with **VMware Workstation Pro**  
 - Installing and configuring **Windows Server**  
-- Setting up **Active Directory Domain Services**  
+- Using **Server Manager** to assign roles and features  
+- Setting up **Active Directory Domain Services (AD DS)**  
 - Managing users, groups, and OUs in AD  
-- Understanding enterprise identity and access management  
-
+- Role-based access control and permissions management  
+- Understanding enterprise **Identity & Access Management (IAM)**  
 
             
