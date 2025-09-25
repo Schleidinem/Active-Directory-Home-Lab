@@ -1,74 +1,61 @@
-# 🖥️ Active Directory Setup Lab
+# 🖥️ Active Directory Home Lab with VMware 
 
-This project demonstrates how to set up a Microsoft Active Directory (AD) environment inside a Windows Server virtual machine. It showcases hands-on skills in system administration, user/group management, domain configuration, and automation with PowerShell.  
+## 📌 Project Overview  
+This lab demonstrates how to set up **Active Directory (AD)** on a **Windows Server virtual machine** using **VMware Workstation Pro**.  
+The project covers installation, configuration, and AD setup, including **Organizational Units (OUs), groups, and user accounts** — simulating a real enterprise environment.  
 
----
+## 🎯 Objectives  
+- Install Windows Server in VMware Workstation Pro  
+- Set up and configure **Active Directory Domain Services (AD DS)**  
+- Create **Organizational Units (OUs)** to represent departments/regions  
+- Add **groups** within OUs  
+- Create and manage **user accounts** in AD  
 
-## 📌 Overview
-- **Platform**: VirtualBox / VMware / Azure VM  
-- **OS**: Windows Server 2019/2022 Datacenter (Desktop Experience)  
-- **Network**: Private Virtual Network (Static IP)  
-- **Tools**:  
-  - Active Directory Domain Services (AD DS)  
-  - Active Directory Users and Computers (ADUC)  
-  - PowerShell  
+## 🛠️ Tech Stack  
+- VMware Workstation 
+- Windows Server (ISO image)  
+- Active Directory Domain Services (AD DS)  
 
----
+## 📂 Lab Steps  
 
-## ⚙️ Environment Setup
+1. **VMware Setup**  
+   - Installed VMware Workstation Pro
+     <img width="975" height="635" alt="image" src="https://github.com/user-attachments/assets/206d19bc-202c-4eae-b36c-23245c7144f4" />
 
-### Step 1: Create the VM
-1. Provision a new VM with:  
-   - 4 GB RAM, 2 CPUs, 60 GB storage.  
-   - Networking: NAT + Host-Only (or Azure VNet if cloud-based).  
-2. Install **Windows Server 2019/2022**.  
-3. Configure **Administrator password**.  
+   - Downloaded Windows Server ISO
+     <img width="917" height="488" alt="image" src="https://github.com/user-attachments/assets/b6eeac90-e5a6-4495-a3cd-b4ac2b0b5d7e" />
 
----
+   - Created a new virtual machine (VM)
+     <img width="975" height="426" alt="image" src="https://github.com/user-attachments/assets/a1c6171a-49aa-4fc5-aded-5bdd7a0b5a90" />
 
-### Step 2: Configure Networking
-Set a **static IP** on your VM:  
-- **IP**: `192.168.1.10`  
-- **Subnet**: `255.255.255.0`  
-- **Gateway**: `192.168.1.1`  
-- **DNS**: `127.0.0.1`  
+   - Installed Windows Server on the VM
+     <img width="975" height="425" alt="image" src="https://github.com/user-attachments/assets/4eceef33-2685-4213-87e3-75f4ce87451b" />
+     <img width="975" height="578" alt="image" src="https://github.com/user-attachments/assets/50a7bd96-7686-4062-906c-623084f9393a" />
 
----
 
-### Step 3: Install AD DS Role
-1. Open **Server Manager** → *Add Roles and Features*.  
-2. Install **Active Directory Domain Services (AD DS)**.  
-3. Promote the server to a **Domain Controller**.  
-4. Create a new forest:  
-   - Domain name: `corp.local`.  
-5. Restart VM.  
+2. **Active Directory Installation**  
+   - Installed **Active Directory Domain Services (AD DS)**
+     <img width="975" height="628" alt="image" src="https://github.com/user-attachments/assets/167a9753-d269-4c9a-88e7-65c940d00c83" />
 
----
 
-### Step 4: Configure Active Directory
-1. Open **ADUC**.  
-2. Create **Organizational Units (OUs)**:  
-   - `Users`  
-   - `Groups`  
-   - `Service Accounts`  
-3. Add test users:  
-   - `John.Doe` (Sales)  
-   - `Jane.Smith` (HR)  
-   - `Admin.User` (Help Desk Admin)  
-   - `Svc_Deploy` (Service Account)  
-4. Add groups:  
-   - `IT.Support`  
-   - `HR.Team`  
+3. **Active Directory Configuration**  
+   - Created **Organizational Units (OUs)** for different regions
+     <img width="975" height="529" alt="image" src="https://github.com/user-attachments/assets/040af9b1-c15c-427a-adef-eae96b0d8bdb" />
+  
+   - Created **Groups** within OUs
+     <img width="975" height="672" alt="image" src="https://github.com/user-attachments/assets/db52449b-f7bb-49c3-b89b-490d40a5d331" />
 
----
+   - Added **Users** and assigned them to groups
+     <img width="975" height="483" alt="image" src="https://github.com/user-attachments/assets/7466886a-59c0-48b9-8b6f-d209e846ec9a" />
+     <img width="975" height="561" alt="image" src="https://github.com/user-attachments/assets/428b498c-0bda-449a-9a44-983d2c3660cc" />
 
-### Step 5: Automate with PowerShell
-```powershell
-# Bulk create sample users in OU=Users
-1..10 | ForEach-Object {
-  New-ADUser -Name "User$_" `
-             -SamAccountName "user$_" `
-             -Path "OU=Users,DC=corp,DC=local" `
-             -Enabled $true `
-             -AccountPassword (ConvertTo-SecureString 'P@ssw0rd!' -AsPlainText -Force)
-}
+
+## 📜 Key Learnings  
+- Hands-on experience with **VMware Workstation Pro**  
+- Installing and configuring **Windows Server**  
+- Setting up **Active Directory Domain Services**  
+- Managing users, groups, and OUs in AD  
+- Understanding enterprise identity and access management  
+
+
+            
